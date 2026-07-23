@@ -1,0 +1,43 @@
+{
+  "_readme": "Copy this file to profile.json (gitignored) and fill it in — or put the same JSON in the PROFILE_JSON env var for deploys. Every '_comment' key is documentation and is ignored by the loader.",
+
+  "_comment_name": "Used verbatim in LLM prompts ('helping <name> connect with the PI ...').",
+  "name": "Alex Example",
+
+  "_comment_bio": "Free-text background embedded in the networking prompt. Education, research experience, skills, career goals — anything an outreach strategist should know.",
+  "bio": "Recent neuroscience graduate with two years of wet-lab experience in a sleep-and-circadian-biology lab, a co-authored methods paper, and strong Python/R data-analysis skills. Seeking an entry-level clinical research role before applying to MD/PhD programs.",
+
+  "interests": {
+    "_comment_institutions": "Canonical institution names the candidate has targeted before. Must match the INSTITUTION_BY_SITE values in src/pi.ts to add score.",
+    "institutions": ["Weill Cornell Medicine", "NYU Langone Health"],
+
+    "_comment_departments": "Departments applied to before (whole-word matched against posting departments).",
+    "departments": ["Psychiatry", "Neurology"],
+
+    "_comment_researchThemes": "Research themes of interest (whole-word matched against title/department/summary).",
+    "researchThemes": ["circadian", "sleep", "neuroimaging"],
+
+    "_comment_relatedThemes": "Optional softer secondary terms per theme, matched when the theme itself is absent. Keyed by theme.",
+    "relatedThemes": {
+      "circadian": ["chronobiology", "melatonin"],
+      "neuroimaging": ["fMRI", "MRI", "EEG"]
+    }
+  },
+
+  "_comment_applications": "Past-application history. Powers the 'why this matches your history' scoring and gives the networking prompt authentic outreach hooks. Generate this block from a cover-letter corpus with `npm run extract-interests`.",
+  "applications": [
+    {
+      "_comment": "pi = PI/lab head the application targeted; angles = real hooks used in that letter.",
+      "pi": "Rivera",
+      "institution": "NYU Langone Health",
+      "department": "Psychiatry",
+      "researchArea": "circadian rhythms and mood disorders",
+      "roleType": "research-assistant",
+      "angles": [
+        "Co-authored a 2025 methods paper on actigraphy preprocessing",
+        "Presented a poster at SLEEP 2025",
+        "Two years running human sleep-study protocols"
+      ]
+    }
+  ]
+}

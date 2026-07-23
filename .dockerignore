@@ -1,0 +1,8 @@
+node_modules
+dist
+snapshot.json
+snapshot.prev.json
+.env
+.git
+.gitignore
+*.md

@@ -1,0 +1,27 @@
+{
+  "name": "academic-job-digest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "tsx --env-file=.env src/index.ts",
+    "test-email": "tsx --env-file=.env src/test-email.ts",
+    "replay-today": "tsx --env-file=.env src/replay-today.ts",
+    "extract-interests": "tsx --env-file=.env src/extract-interests.ts",
+    "sync-sheet": "tsx --env-file=.env src/sync-sheet.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.96.0",
+    "pg": "^8.20.0",
+    "playwright": "1.60.0",
+    "resend": "^6.12.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.20.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,21 @@
+# secrets & personal data
+.env
+.env.*
+!.env.example
+profile.json
+
+# input corpus for the dev-only extract-interests generator
+cover-letters/
+
+# state / output
+snapshot.json
+snapshot.prev.json
+digest.html
+*.log
+
+# build
+node_modules/
+dist/
+
+# os
+.DS_Store
